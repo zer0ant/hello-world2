@@ -25,6 +25,9 @@ jobs:
       - name: build success
         run: echo build success
 
+      - name: check node version
+        run: node -v
+
   test:
     name: Test
     runs-on: ubuntu-latest
