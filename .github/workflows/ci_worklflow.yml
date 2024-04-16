@@ -16,17 +16,35 @@ on:
 
 jobs:
   build:
-    name: My first job
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: build success
+        run: echo build success
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    steps:
+      - name: test success
+        run: echo test success
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: deploy success
+        run: echo deploy success
+
+  cleanUp:
+    name: Clean up
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clean up success
+        run: echo clean up success
